@@ -1,0 +1,27 @@
+.button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    letter-spacing: 2.5px;
+    text-transform: capitalize;
+}
+
+.m {
+    padding: 5px 15px;
+    font-size: 14px;
+}
+
+.l {
+    padding: 10px 40px;
+    font-size: 16px;
+}
+
+.black {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.danger {
+    background-color: var(--red);
+    color: var(--white);
+}
