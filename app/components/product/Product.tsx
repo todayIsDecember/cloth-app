@@ -3,7 +3,7 @@ import cn from 'classnames';
 import styles from './Product.module.css'
 import Image from 'next/image'
 import { API } from "../../../helpers/api";
-import { Button } from "../button/Button";
+import { H, Button, Text } from "..";
 
 export const Product = ({className, product, ...props}: ProductProps): JSX.Element => {
     return (
@@ -12,8 +12,8 @@ export const Product = ({className, product, ...props}: ProductProps): JSX.Eleme
                 <Image src={`${API.image.get}/${product.photo}`} fill alt="image"></Image>
             </div>
             <div className={styles.info}>
-                <p className={styles.name}>{product.name}</p>
-                <p className={styles.description}>{product.description}</p>
+                <H tag="h2" className={styles.name}>{product.name}</H>
+                <Text className={styles.description}>{product.description}</Text>
                 <div className={styles.priceContainer}>
                     <div>{product.prices.price}грн / м</div>
                     <Button appearance="black" size="m">Купити</Button>

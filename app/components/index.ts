@@ -6,3 +6,5 @@ export * from "./product/Product";
 export * from "./button/Button";
 export * from "./review/Review";
 export * from "./rating/Rating";
+export * from "./h/H";
+export * from "./text/Text";

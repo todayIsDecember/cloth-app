@@ -1,12 +1,16 @@
 'use client'
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RatingProps } from "./RatingProps";
 import StarIcon from '../../../public/star.svg';
 import cn from "classnames";
 import styles from './Rating.module.css';
-export const Rating = ({rating, isEditable = false, setRating, ...props}: RatingProps): JSX.Element => {
+export const Rating = ({raiting, isEditable = false, setRating, ...props}: RatingProps): JSX.Element => {
     const [raitingArray, setRaitingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));
+
+    useEffect(() => {
+        constructRaiting(raiting)
+        }, [raiting])
 
     const constructRaiting = (currentRaiting: number) => {
         const updatedArray = raitingArray.map((r: JSX.Element, i: number) => {
@@ -18,7 +22,7 @@ export const Rating = ({rating, isEditable = false, setRating, ...props}: Rating
                         [styles.editable]: isEditable
                     })}
                     onMouseEnter={() => changeDisplay(i + 1)}
-                    onMouseLeave={() => changeDisplay(rating)}
+                    onMouseLeave={() => changeDisplay(raiting)}
                     onClick={() => onClick(i + 1)}
                 />
             )

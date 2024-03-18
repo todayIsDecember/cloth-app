@@ -1,16 +1,16 @@
 .filled {
-    fill: rgb(255, 215, 0);
-  }
+  fill: rgb(255, 215, 0);
+}
   
-  .star {
+.star {
     margin-right: 2px;
     width: 15px;
     height: 15px;
-  }
+}
   
-  .editable {
+.editable {
     cursor: pointer;
     width: 30px;
     height: 30px;
     margin-right: 7px;
-  }
+}

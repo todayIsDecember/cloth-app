@@ -1,6 +1,6 @@
 export interface IReview {
     id: number
-    rating: number
+    raiting: number
     name: string;
     description: string;
 }

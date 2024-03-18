@@ -1,6 +1,6 @@
 .product {
     display: grid;
-    grid-template-columns: 40% 1fr;
+    grid-template-columns: 30% 1fr;
 }
 
 .info {
@@ -10,15 +10,6 @@
     border-top: 1px solid var(--grey-light);
     border-bottom: 1px solid var(--grey-light);
     margin: 0;
-}
-
-.name {
-    font-size: 22px;
-}
-
-.description {
-    font-size: 14px;
-    color: var(--black-light);
 }
 
 .priceContainer {
