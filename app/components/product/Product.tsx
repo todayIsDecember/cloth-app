@@ -9,7 +9,7 @@ export const Product = ({className, product, ...props}: ProductProps): JSX.Eleme
     return (
         <div className={cn(className, styles.product)}>
             <div className={styles.image}>
-                <Image src={`${API.image.get}/${product.photo}`} fill alt="image"></Image>
+                <Image src={`${API.image.get}/${product.photo}`} sizes="(100vw - 30px)" fill alt="image"></Image>
             </div>
             <div className={styles.info}>
                 <H tag="h2" className={styles.name}>{product.name}</H>

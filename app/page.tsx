@@ -10,10 +10,6 @@ export default async function Home() {
   const reviews = await getThreeReviews();
   return (
     <main className={styles.main}>
-      <div className={styles.previewPhoto}>
-        <p className={styles.title}>Салон Тюлей та Штор</p>
-        <p className={styles.subtitle}>Sofia</p>
-      </div>
       <div className={styles.catalogSection}>
         <div className={styles.catalog}>
           {products.map((product) => (

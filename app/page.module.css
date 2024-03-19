@@ -2,35 +2,6 @@
     padding-bottom: 30px;
 }
 
-.previewPhoto {
-    margin-bottom: 30px;
-    width: 100%;
-    height: 220px;
-    background-image: url('../public/images/fone.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: grid;
-    justify-items: center;
-    align-content: center;
-    gap: 15px;
-}
-
-.title {
-    color: var(--grey);
-    margin: 0;
-    letter-spacing: 8px;
-    font-size: 20px;
-}
-
-.subtitle {
-    color: var(--white);
-    margin: 0;
-    letter-spacing: 15px;
-    font-size: 32px;
-    font-weight: 600;
-}
-
 .catalogButton, .reviewButton {
     justify-self: center;
 }
@@ -38,13 +9,14 @@
 .advantagesSection, .reviewSection, .catalogSection {
     display: grid;
     justify-content: center;
-    grid-template-columns: minmax(320px, 1000px);
+    grid-template-columns: minmax(320px, 1200px);
     gap: 30px;
     margin-top: 40px;
 }
 
 .catalog {
     display: grid;
+    padding: 0px 100px;
     gap: 30px;
 }
 

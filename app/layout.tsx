@@ -20,7 +20,13 @@ export default function RootLayout({
         <div className={styles.wrapper}>
           <Header className={styles.header}/>
           <Sidebar className={styles.sidebar}/>
-          <div className={styles.body}>{children}</div>
+          <div className={styles.body}>
+            <div className={styles.previewPhoto}>
+              <p className={styles.title}>Салон Тюлей та Штор</p>
+              <p className={styles.subtitle}>Sofia</p>
+            </div>
+            {children}
+            </div>
           <Footer className={styles.footer}/>
         </div>
       </body>
