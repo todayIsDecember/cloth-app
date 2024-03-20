@@ -10,3 +10,5 @@ export * from "./h/H";
 export * from "./text/Text";
 export * from './input/Input'
 export * from './textarea/Textarea'
+export * from './reviewForm/ReviewForm'
+export * from './alert/Alert'

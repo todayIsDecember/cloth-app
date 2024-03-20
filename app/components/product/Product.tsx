@@ -4,6 +4,7 @@ import styles from './Product.module.css'
 import Image from 'next/image'
 import { API } from "../../../helpers/api";
 import { H, Button, Text } from "..";
+import BascetIcon from '../../../public/basket.svg'
 
 export const Product = ({className, product, ...props}: ProductProps): JSX.Element => {
     return (
@@ -16,7 +17,7 @@ export const Product = ({className, product, ...props}: ProductProps): JSX.Eleme
                 <Text className={styles.description}>{product.description}</Text>
                 <div className={styles.priceContainer}>
                     <div>{product.prices.price}грн / м</div>
-                    <Button appearance="black" size="m">Купити</Button>
+                    <Button appearance="black" size="m" type="buy"><BascetIcon></BascetIcon></Button>
                 </div>
             </div>
         </div>

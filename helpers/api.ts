@@ -7,5 +7,7 @@ export const API = {
   },
   reviews: {
     getThree: `${process.env.NEXT_PUBLIC_DOMAIN}/api/reviews/getTop`,
+    getAll: `${process.env.NEXT_PUBLIC_DOMAIN}/api/reviews/getAll`,
+    addReview: `${process.env.NEXT_PUBLIC_DOMAIN}/api/reviews/create`,
   },
 };

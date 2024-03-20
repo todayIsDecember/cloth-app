@@ -5,6 +5,6 @@ export interface ButtonProps
     children: React.ReactNode;
     appearance: "danger" | "black";
     size: "m" | "l";
-    type?: "button" | "submit" | "delete";
+    type?: "button" | "submit" | "delete" | "buy";
 
 }
