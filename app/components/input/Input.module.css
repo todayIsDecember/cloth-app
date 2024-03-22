@@ -3,7 +3,7 @@
 .input {
   border: none;
   outline: none;
-  padding: 10px 15px;
+  padding: 10px 0px;
   color: var(--black-light);
   letter-spacing: 1.5px;
   transition: 0.2s ease;

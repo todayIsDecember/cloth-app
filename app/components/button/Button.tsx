@@ -4,7 +4,7 @@ import styles from './Butoon.module.css'
 
 export const Button = ({children, appearance, size, type = 'button', className, ...props}: ButtonProps): JSX.Element => {
     return (
-        <button className={cn(className, styles.button, {
+        <button {...props} className={cn(className, styles.button, {
             [styles.m] : size === 'm',
             [styles.l]: size === 'l',
             [styles.danger]: appearance === 'danger',

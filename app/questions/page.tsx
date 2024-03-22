@@ -5,8 +5,9 @@ export const metadata: Metadata = {
 
 }
 
-export default function Questions ():JSX.Element {
+export default async function Questions ():Promise<JSX.Element> {
     return (
-        <div></div>
+        <div>
+        </div>
     )
 }
