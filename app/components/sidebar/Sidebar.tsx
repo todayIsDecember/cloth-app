@@ -18,7 +18,6 @@ export const Sidebar = ({className, ...props}: SidebarProps): JSX.Element => {
         <Link href={'/catalog'} className={styles.link} ><LinkCustom isActive={currentPath === '/catalog'? true: false}>Каталог</LinkCustom></Link>
         <Link href={'/reviews'} className={styles.link}><LinkCustom isActive={currentPath === '/reviews'? true: false}>Відгуки</LinkCustom></Link>
         <Link href={'/questions'} className={styles.link}><LinkCustom isActive={currentPath === '/questions'? true: false}>FAQ</LinkCustom></Link>
-        <Link href={'/questions'} className={styles.link}><LinkCustom isActive={currentPath === '/questions'? true: false}>Кошик</LinkCustom></Link>
     </div>
     );
 }

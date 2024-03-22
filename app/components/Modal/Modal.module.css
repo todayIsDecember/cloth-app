@@ -12,6 +12,10 @@
   padding: 20px;
   animation-name: showModal;
   animation-duration: 0.3s;
+  border: 1px solid var(--grey-light);
+  box-shadow: 1px 1px 10px var(--black-light);
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
 
 @keyframes showModal {

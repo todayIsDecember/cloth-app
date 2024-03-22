@@ -12,5 +12,6 @@ export interface IProduct {
   photo: string;
   price: string;
   discontinued: boolean;
+  isfinished: true;
   prices: IPrices;
 }

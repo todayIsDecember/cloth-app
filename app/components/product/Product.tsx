@@ -5,7 +5,7 @@ import cn from 'classnames';
 import styles from './Product.module.css'
 import Image from 'next/image'
 import { API } from "../../../helpers/api";
-import { H, Button, Text, Modal } from "..";
+import { H, Button, Text, Modal, BackDrop } from "..";
 import { useState } from "react";
 
 export const Product = ({className, product, ...props}: ProductProps): JSX.Element => {
@@ -31,6 +31,7 @@ export const Product = ({className, product, ...props}: ProductProps): JSX.Eleme
                     <Button appearance="black" size="m" type="buy" onClick={openModal}>Купити</Button>
                 </div>
             </div>
+            {isOpen && <BackDrop onClick={closeModal}></BackDrop>}
             <Modal isOpen={isOpen} onClose={closeModal} product={product}></Modal>
         </div>
     )

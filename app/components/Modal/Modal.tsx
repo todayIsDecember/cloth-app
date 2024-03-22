@@ -3,7 +3,7 @@
 import { ModalProps } from "./ModalProps";
 import cn from 'classnames';
 import styles from './Modal.module.css'
-import { Button, OrderForm, Product } from "..";
+import { Button, OrderForm, Product, ProductForm } from "..";
 import { useEffect, useState } from "react";
 
 export const Modal = ({product, className, isOpen, onClose, ...props}: ModalProps) => {
@@ -12,6 +12,7 @@ export const Modal = ({product, className, isOpen, onClose, ...props}: ModalProp
     <div className={cn(className, styles.modal)} {...props}>
         <div className={styles.content}>
             <OrderForm></OrderForm>
+            <ProductForm></ProductForm>
             <Button onClick={onClose} appearance='black' size="m">Добавити в кошик</Button>
         </div>
     </div>
