@@ -28,23 +28,23 @@ export const ReviewForm = ({className, ...props}: ReviewFormProps): JSX.Element 
       body: JSON.stringify(data)
     }).then(res => res.json()
     ).then(data => {
-      
-      if(data.success) {
+
+      if(data) {
         setIsSuccess(true)
       } else {
         setError(data.message)
       }
     }
     )
-    
+
     reset()
-    
+
   }
 
   return (
     <form className={cn(className, styles.form)} {...props} onSubmit={handleSubmit(onSubmit)}>
       <H tag="h3" className={styles.title}>Залиште відгук про нашу продукцію</H>
-      <Input value="Ваше ім'я" className={styles.name} {...register('name')}/>
+      <Input inputValue="Ваше ім'я" className={styles.name} {...register('name')}/>
       <Textarea value="ваш відгук" className={styles.review} {...register('description')}/>
       <Controller control={control} name="raiting" render={({field}) => <Rating raiting={field.value} setRating={field.onChange} isEditable/>}/>
       <Button appearance="black" size="m" className={styles.btn}>Надіслати</Button>

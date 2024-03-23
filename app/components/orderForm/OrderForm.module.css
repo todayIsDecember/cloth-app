@@ -1,16 +1,37 @@
 .orderForm {
   display: grid;
   gap: 20px;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+  "contactForm contactForm"
+  "deliveryForm deliveryForm"
+  "fullPrice button";
+}
+
+.subForm {
+  border: 1px solid var(--grey-light);
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.button {
+  grid-area: button;
 }
 
 .contactForm {
-  border: 1px solid var(--grey-light);
-  padding: 10px;
+  grid-area: contactForm;
 }
 
 .deliveryForm {
-  border: 1px solid var(--grey-light);
-  padding: 10px;
+  grid-area: deliveryForm;
+}
+
+.fullPrice {
+  grid-area: fullPrice;
+}
+
+.title {
 }
 
 .switch {

@@ -13,7 +13,6 @@ export const Modal = ({product, className, isOpen, onClose, ...props}: ModalProp
         <div className={styles.content}>
             <OrderForm></OrderForm>
             <ProductForm></ProductForm>
-            <Button onClick={onClose} appearance='black' size="m">Добавити в кошик</Button>
         </div>
     </div>
   )
