@@ -1,0 +1,60 @@
+.form {
+    border: 1px solid var(--grey-light);
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    height: 400px;
+}
+
+.image {
+    position: relative;
+    object-fit: contain;
+    object-position: center;
+}
+
+.info {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: auto 1fr auto 1fr;
+    grid-template-areas: 
+    "name name name name"
+    "colorTitle color . ."
+    "widthTitle . heightTitle ."
+    "isReady isReady isReady ."
+    "price . . button ";
+    gap: 10px;
+    align-items: center;
+}
+
+.name {
+    grid-area: name;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.colorTitle {
+    grid-area: colorTitle;
+}
+
+.color {
+    grid-area: color;
+}
+
+.widthTitle {
+    grid-area: widthTitle;
+}
+
+.heightTitle {
+    grid-area: heightTitle;
+}
+
+.isReady {
+    grid-area: isReady;
+}
+
+.price {
+    grid-area: price;
+}
+
+.button {
+    grid-area: button;
+}

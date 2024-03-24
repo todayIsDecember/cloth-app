@@ -15,7 +15,12 @@
   border: 1px solid var(--grey-light);
   box-shadow: 1px 1px 10px var(--black-light);
   display: grid;
-  grid-template-columns: 40% 1fr;
+  grid-template-columns: 1fr 40%;
+  gap: 20px;
+}
+
+.orderForm {
+  align-self: center;
 }
 
 @keyframes showModal {

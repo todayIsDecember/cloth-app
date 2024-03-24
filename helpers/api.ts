@@ -1,6 +1,7 @@
 export const API = {
   products: {
     getThree: `${process.env.NEXT_PUBLIC_DOMAIN}/api/products/getTopThree`,
+    getColors: `${process.env.NEXT_PUBLIC_DOMAIN}/api/products/getColors`,
   },
   image: {
     get: `${process.env.NEXT_PUBLIC_DOMAIN}`,

@@ -3,7 +3,7 @@
 import { OrderFormProps } from "./OrderFormProps";
 import cn from 'classnames';
 import styles from './OrderForm.module.css';
-import { useForm } from 'react-hook-form'
+import { useForm, Controller } from 'react-hook-form'
 import { IOrderForm } from "../../../interfaces/orderForm.interface";
 import { AutoComplit, Button, H, Input } from "..";
 import { useState } from "react";
@@ -16,8 +16,16 @@ export const OrderForm = ({className, ...props}: OrderFormProps): JSX.Element =>
   const [city, setCity] = useState<string>('')
   const [delivery, setDelivery] = useState<string>('')
   const [fullPrice, setFullPrice] = useState<number>(0)
+
+  const onSubmit = (data) => {
+    data.full_price = fullPrice
+    data.delivery = delivery
+    data.city = city
+    console.log(data);
+    
+  }
   return (
-    <form className={cn(className, styles.orderForm)} {...props} onSubmit={handleSubmit((data) => console.log(data))}>
+    <form className={cn(className, styles.orderForm)} {...props} onSubmit={handleSubmit(onSubmit)}>
       <div className={cn(styles.subForm, styles.contactForm)}>
         <H className={styles.title} tag="h3">Контактна інформація</H>
         <Input inputValue="ваше ім'я" {...register('customer_name')} typeBtn="text"/ >
@@ -25,10 +33,16 @@ export const OrderForm = ({className, ...props}: OrderFormProps): JSX.Element =>
       </div>
       <div className={cn(styles.subForm, styles.deliveryForm)}>
         <H tag="h3" className={styles.title}>Доставка новою поштою</H>
-        <label className={cn(styles.switch, styles.switchStatus)}>
-            <input type="checkbox" checked={isDelivery} {...register('usedelivery')} onChange={() => setIsDelivery(!isDelivery)}/>
+        <Controller
+          control={control}
+          name="usedelivery"
+          render={({ field }) => (
+            <label className={cn(styles.switch, styles.switchStatus)}>
+            <input type="checkbox" checked={isDelivery} onChange={() => {setIsDelivery(!isDelivery); field.onChange(!isDelivery)}}/>
             <span className={styles.slider}></span>
         </label>
+          )}
+        />
         {isDelivery &&
           <div className={styles.delivery}>
             <AutoComplit type="населений пункт" getResponse={getAddresses} onSave={(value) => setCity(value)}></AutoComplit>

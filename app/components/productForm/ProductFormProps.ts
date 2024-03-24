@@ -1,6 +1,6 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react";
-import { IProductForm } from "../../../interfaces/productForm.interface";
+import { IProduct } from "../../../interfaces/product.interface";
 
 export interface ProductFormProps  extends DetailedHTMLProps<HTMLAttributes<HTMLFormElement>, HTMLFormElement> {
-  // productValue: IProductForm
+  product: IProduct
 }

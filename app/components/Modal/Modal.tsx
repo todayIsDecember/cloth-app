@@ -10,10 +10,8 @@ export const Modal = ({product, className, isOpen, onClose, ...props}: ModalProp
   if(!isOpen) return null
   return (
     <div className={cn(className, styles.modal)} {...props}>
-        <div className={styles.content}>
-            <OrderForm></OrderForm>
-            <ProductForm></ProductForm>
-        </div>
+            <ProductForm product={product}></ProductForm>
+            <OrderForm className={styles.orderForm}></OrderForm>
     </div>
   )
 }
